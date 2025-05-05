@@ -200,25 +200,6 @@ public final class Checksum {
         return (10 - (checksum % 10)) % 10;
     }
 
-    Scanner scanner = new Scanner(System.in);
-
-    System.out.println("Enter the file name:");
-    String fileName = scanner.nextLine();
-
-    File file = new File("/path/to/directory/" + fileName);
-
-        try {
-        FileReader reader = new FileReader(file);
-        int character;
-        while ((character = reader.read()) != -1) {
-            System.out.print((char) character);
-        }
-        reader.close();
-    } catch (IOException e) {
-        System.out.println("Error reading file: " + e.getMessage());
-    }
-}
-
     public static int ip(ByteBuffer data) {
         int sum = 0;
         while (data.remaining() > 0) {
